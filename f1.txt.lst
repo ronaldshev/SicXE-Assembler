@@ -1,0 +1,15 @@
+ERROR: Undefined Label At Address 107
+
+Address	Opcode  	Label      	Instruction	Operand     	Comment 
+100    	        	ADDRES     	START      	100         	        
+100    	69100116	NOW        	+LDB       	#BEGIN      	        
+104    	        	XXX        	BASE       	BEGIN       	        
+104    	03200C  	YYY        	LDA        	BE          	        
+107    	        	           	RESW       	4           	        
+113    	000002  	BE         	WORD       	2           	        
+116    	        	BEGIN      	RESW       	1           	        
+119    	        	JUNK       	RESW       	2200        	        
+1ae1   	        	THERE      	RESW       	1           	        
+1ae4   	034003  	ZZZ        	LDA        	JUNK        	        
+1ae7   	0F2FF7  	MMM        	STA        	THERE       	        
+1aea   	        	           	END        	NOW         	        

@@ -1,0 +1,48 @@
+ERROR: Undefined Label At 'START'
+ERROR: Undefined Label At Address 100
+ERROR: Undefined Label At Address 109
+ERROR: Invalid Mneumonic 'TUFUE' is an invalid command.
+ERROR: Undefined Label At Address 10d
+ERROR: Undefined Label At Address 110
+ERROR: Undefined Label At Address 110
+ERROR: Undefined Label At Address 116
+ERROR: Undefined Label At Address 119
+ERROR: Undefined Label At Address 3d7
+ERROR: Undefined Label At Address 3dc
+ERROR: Undefined Label At Address 3dd
+
+Address	Opcode  	Label              	Instruction	Operand            	Comment 
+100    	        	                   	START      	100                	        
+100    	032024  	                   	LDA        	LBL                	        
+----            	.hey
+----            	
+----            	
+103    	01002D  	UP                 	LDA        	#45                	.COMMENT
+106    	02201E  	TEST               	LDA        	@LBL               	        
+109    	03100127	                   	+LDA       	LBL                	.COMMENT (NEEDS TO START WITH A PERIOD)
+----   	        	PPPP               	TUFUE      	LBL                	        
+10d    	03A017  	                   	LDA        	LBL,X              	        
+110    	        	                   	BASE       	BEG                	        
+110    	012014  	                   	LDA        	#LBL               	        
+113    	012140  	BEG                	LDA        	#NLB               	        
+116    	1D2FFA  	                   	SUB        	#BEG               	        
+119    	        	BUFF               	EQU        	101                	        
+119    	        	BIG                	EQU        	*                  	        
+119    	4F0000  	                   	RSUB       	                   	        
+11c    	454F46  	uh                 	BYTE       	C'EOF'             	        
+11f    	1234567 	omfg               	BYTE       	X'1234567890123445'	        
+127    	000032  	LBL                	WORD       	50                 	        
+12a    	        	STAR               	RESW       	100                	        
+256    	        	NLB                	RESW       	100                	        
+382    	        	LOL                	RESB       	1                  	        
+383    	        	                   	LTORG      	                   	        
+383    	EOF     	C'EOF'             	BYTE       	'EOF'              	        
+384    	1234567 	X'1234567890123445'	BYTE       	'1234567890123445' 	        
+38c    	        	TEST2              	RESB       	75                 	        
+3d7    	000005  	                   	WORD       	5                  	        
+3da    	05      	XD                 	BYTE       	X'05'              	        
+3db    	        	                   	LTORG      	                   	        
+3db    	05      	X'05'              	BYTE       	'05'               	        
+3dc    	01      	                   	BYTE       	X'01'              	        
+3dd    	000001  	                   	WORD       	1                  	        
+3e0    	        	                   	END        	                   	        
